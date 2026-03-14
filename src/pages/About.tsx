@@ -92,14 +92,15 @@ export default function About() {
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">Leadership</span>
             <h2 className="mt-3 text-3xl font-extrabold text-gray-900 sm:text-4xl">Meet Our Team</h2>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { name: 'Dr. Shobana S', role: 'Founder & CEO', bio: 'Visionary leader with 10+ years in digital technology and business strategy.' },
-              { name: 'Mr. Shibi Santhosh V', role: 'CTO', bio: 'Full-stack architect passionate about scalable solutions and emerging technologies.' },
-              { name: 'Ms. Subhashini V S', role: 'Head of Design', bio: 'Award-winning designer focused on creating intuitive, human-centered experiences.' },
+              { name: 'Dr. Shobana S', initial: 'S', role: 'Founder & CEO', bio: 'Visionary leader with 10+ years in digital technology and business strategy.' },
+              { name: 'Er. Kanmani S', initial: 'K', role: 'Co-Founder & COO', bio: 'Operations strategist driving efficiency and excellence across all business verticals.' },
+              { name: 'Mr. Shibi Santhosh V', initial: 'S', role: 'CTO', bio: 'Full-stack architect passionate about scalable solutions and emerging technologies.' },
+              { name: 'Ms. Subhashini V S', initial: 'S', role: 'Head of Design', bio: 'Award-winning designer focused on creating intuitive, human-centered experiences.' },
             ].map((m, i) => (
               <div key={i} className="reveal card-hover rounded-2xl border border-gray-200 bg-white p-7 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full gradient-accent text-xl font-bold text-white">{m.name[0]}</div>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full gradient-accent text-xl font-bold text-white">{m.initial}</div>
                 <h3 className="mt-4 text-lg font-bold text-gray-900">{m.name}</h3>
                 <p className="text-sm font-semibold text-accent">{m.role}</p>
                 <p className="mt-2 text-sm text-muted leading-relaxed">{m.bio}</p>
